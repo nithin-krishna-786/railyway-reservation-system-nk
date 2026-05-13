@@ -1,10 +1,16 @@
 package com.nithin.railway_reservation.entity;
 
+import java.time.LocalDate;
+
+import java.time.LocalTime;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "routes")
 public class Route {
     @Id
@@ -22,6 +28,6 @@ public class Route {
     @Column(nullable = false)
     private Integer sequence; // Order of stations in the route
 
-    private String arrivalTime;
-    private String departureTime;
+    private LocalTime arrivalTime;
+    private LocalTime departureTime;
 }
