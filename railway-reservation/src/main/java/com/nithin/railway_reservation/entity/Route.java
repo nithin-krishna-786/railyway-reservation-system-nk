@@ -13,6 +13,7 @@ import lombok.Setter;
 @Setter
 @Table(name = "routes")
 public class Route {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,5 +30,6 @@ public class Route {
     private Integer sequence; // Order of stations in the route
 
     private LocalTime arrivalTime;
+    
     private LocalTime departureTime;
 }
